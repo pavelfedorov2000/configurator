@@ -1,0 +1,25 @@
+<div class="step__content" data-step="4">
+    <div class="step__header">
+        <div class="step-title">Unit appearance</div>
+        <div class="step-num">4/8</div>
+    </div>
+
+    <div id="unit-appearance">
+        @@include('./fields/_material.html')
+        <fieldset class="step__item step-item">
+            <label class="field-title step-item__title" for="must_features">
+                Must-have features in appearance
+            </label>
+            <textarea class="input textarea" name="must_features" id="must_features"></textarea>
+        </fieldset>
+        <div class="step__item">
+            @@include('./fields/_unit-dimensions.html')
+            <div class="step-item__divider">Or</div>
+            @@include('./fields/_radio.html')
+        </div>
+        @@include('./fields/_color-solution.html')
+        @@include('./fields/_preferred-colors.html')
+        @@include('./fields/_surface-finishing.html')
+        @@include('./fields/_drag&drop.html')
+    </div>
+</div>

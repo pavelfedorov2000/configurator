@@ -1,0 +1,61 @@
+// =============== INPUT-FILE ================ //
+.jq-file {
+    position: relative;
+    box-shadow: none;
+    cursor: pointer;
+    padding-left: 2rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        @extend %pos-center-y;
+        left: 0;
+        width: 1.6rem;
+        height: 1.7rem;
+        background-image: url(../img/icons/attach.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__name {
+        background: transparent;
+        width: fit-content;
+        height: auto;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        padding: 0;
+        padding-bottom: 0.3rem;
+        border-bottom: 0.1rem solid #fff;
+    }
+
+    &__browse {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+
+        .jq-file {
+            &__name {
+                border: none;
+                border-bottom: 0.1rem solid #fff;
+                outline: none;
+            }
+        }
+    }
+
+    &.focused,
+    &.changed {
+        .jq-file__name {
+            border: none;
+            border-bottom: 0.1rem solid #fff;
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+/* .error {
+    border-color: $error !important;
+    color: $error;
+
+    &::placeholder {
+        color: $error;
+    }
+}
+
+label.error {
+    color: $error;
+    margin-left: 1rem;
+    font-size: 1.2vh;
+    line-height: 2.4vh;
+
+    @media(max-width: 1024px) {
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+    }
+} */
+
+input.invalid {
+    border-color: $error !important;
+}
+
+// Фоновый цвет у инпута при автозаполнении (по умолчанию синий)
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    //-webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    //color: #fff !important;
+}

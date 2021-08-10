@@ -1,0 +1,283 @@
+// ======================= RANGE SLIDER =========================== //
+.irs {
+    &--flat {
+        width: 100%;
+        padding-top: 3.2rem;
+        margin-bottom: 10rem;
+
+        @media(max-width: 500px) {
+            margin-left: 8.2rem;
+        }
+
+        &.irs-with-grid {
+            //height: 14rem;
+            height: auto;
+        }
+
+        .irs {
+
+            &-min,
+            &-max {
+                display: none;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            &-line {
+                top: 0;
+                height: 0.2rem;
+                background-color: #fff;
+                border-radius: 0;
+
+                @media(max-width: 500px) {
+                    height: 19.4rem;
+                    width: 0.2rem;
+                }
+
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    width: 2.4rem;
+                    height: 100%;
+                    background-color: #000;
+
+                    @media(max-width: 500px) {
+                        display: none;
+                    }
+                }
+
+                &:before {
+                    left: 0;
+                }
+
+                &:after {
+                    right: 0;
+                }
+            }
+
+            &-bar {
+                display: none;
+                top: 0;
+                width: 71.5rem;
+                height: 0.2rem;
+                background-color: #fff;
+
+                @media(max-width: 500px) {
+                    width: 0.1rem;
+                    height: 19.4rem;
+                }
+            }
+
+            &-handle {
+                top: 0;
+                //left: -2.4rem !important;
+                width: 6.3rem;
+                height: 6.3rem;
+                border-radius: 50%;
+
+                @media(max-width: 500px) {
+                    width: 4rem;
+                    height: 4rem;
+                }
+
+                >i:first-child {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: #000;
+                    border: 0.1rem solid #fff;
+                    left: 0;
+                    margin-left: 0;
+                }
+
+                &:hover {
+                    i:first-child {
+                        background-color: #000;
+                    }
+                }
+
+                &.state_hover>i:first-child {
+                    background-color: #000;
+                }
+            }
+
+            &-from,
+            &-to,
+            &-single {
+                display: none;
+            }
+
+            &-grid {
+                width: 100% !important;
+                left: 0 !important;
+                height: 4.8rem;
+                bottom: -9.2rem;
+            }
+
+            &-grid-text {
+                font-family: 'Inter', sans-serif;
+                font-size: 2.2rem;
+                line-height: 2.4rem;
+                color: #fff;
+                padding: 0;
+
+                @media(max-width: 500px) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            &-grid-pol {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                background-color: #fff;
+                top: -5.2rem;
+                z-index: 2;
+
+                &.small {
+                    display: none;
+                }
+
+                &:nth-of-type(1) {
+                    left: 2.4rem !important;
+                }
+            }
+        }
+    }
+}
+
+.js-grid-text-0 {
+    text-align: left;
+    margin-left: 0 !important;
+}
+
+.prototype-timeframe,
+.production-timeframe {
+    .js-grid-text-0 {
+        max-width: 13.1rem;
+        white-space: normal;
+    }
+}
+
+.prototype-timeframe {
+    .irs {
+        &-grid-pol {
+            &:nth-of-type(7) {
+                left: 33.7% !important;
+            }
+
+            &:nth-of-type(13) {
+                left: 64.3% !important;
+            }
+
+            &:nth-of-type(19) {
+                left: auto !important;
+                right: 2.4rem;
+            }
+        }
+    }
+
+    .js-grid-text-3 {
+        margin-left: -8% !important;
+    }
+}
+
+.prototype-timeframe {
+    .js-grid-text-1 {
+        margin-left: -5% !important;
+    }
+
+    .js-grid-text-2 {
+        margin-left: -7% !important;
+    }
+}
+
+.production-timeframe {
+    .irs-grid-text {
+        white-space: normal;
+    }
+
+    .js-grid-text-1 {
+        max-width: 10.5rem;
+        margin-left: -5% !important;
+    }
+
+    .js-grid-text-2 {
+        max-width: 9.7rem;
+    }
+
+    .js-grid-text-3 {
+        max-width: 11.3rem;
+    }
+
+    .js-grid-text-4 {
+        max-width: 15.4rem;
+        margin-left: -11.5% !important;
+    }
+
+    .irs {
+        &-grid-pol {
+            &:nth-of-type(7) {
+                left: 26% !important;
+            }
+
+            &:nth-of-type(13) {
+                left: 49% !important;
+            }
+
+            &:nth-of-type(19) {
+                left: 72% !important;
+            }
+
+            &:nth-of-type(25) {
+                left: 95% !important;
+            }
+        }
+    }
+}
+
+.production-volume {
+    .irs {
+        &-grid-pol {
+            &:nth-of-type(6) {
+                left: 21.4% !important;
+            }
+
+            &:nth-of-type(16) {
+                left: 58% !important;
+            }
+
+            &:nth-of-type(21) {
+                left: 76.6% !important;
+            }
+
+            &:nth-of-type(26) {
+                left: 95% !important;
+            }
+        }
+    }
+
+    .js-grid-text-1 {
+        margin-left: 0 !important;
+    }
+
+    .js-grid-text-2 {
+        margin-left: -3% !important;
+    }
+
+    .js-grid-text-3 {
+        margin-left: -5% !important;
+    }
+
+    .js-grid-text-4 {
+        margin-left: -7% !important;
+    }
+
+    .js-grid-text-5 {
+        margin-left: -9.5% !important;
+    }
+}

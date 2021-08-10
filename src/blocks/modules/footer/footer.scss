@@ -1,0 +1,176 @@
+.footer {
+
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    background-color: #222;
+    padding: 6rem 0;
+    color: #fff;
+
+    @media(max-width: 500px) {
+        padding: 2rem 0;
+    }
+
+    // .footer__row
+
+    &__row {
+        @extend %flex-row;
+
+        @media(max-width: 992px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    // .footer__col
+
+    &__col {
+
+        @media(max-width: 992px) {
+            margin-bottom: 4rem;
+        }
+
+        &:nth-child(1) {
+            flex: 0 0 34.8rem;
+
+            @media(max-width: 992px) {
+                flex: 0 0 100%;
+            }
+        }
+
+        &:nth-child(2) {
+            margin-left: 14.3rem;
+            margin-right: auto;
+
+            @media(max-width: 992px) {
+                width: 50%;
+                margin-left: auto;
+            }
+
+            @media(max-width: 500px) {
+                width: 100%;
+            }
+        }
+
+        &:nth-child(3) {
+            margin-left: auto;
+            margin-right: 19.4rem;
+
+            @media(max-width: 992px) {
+                width: 50%;
+                margin-right: auto;
+            }
+
+            @media(max-width: 500px) {
+                width: 100%;
+            }
+        }
+
+        &:nth-child(4) {
+            @media(max-width: 992px) {
+                width: 100%;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        margin-bottom: 2rem;
+    }
+
+    // .footer__text
+
+    &__text {
+        line-height: 2.2rem;
+
+        @media(max-width: 500px) {
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    // .footer__copy
+
+    &__copy {
+        font-weight: 600;
+    }
+
+    // .footer__title
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+
+        @media(max-width: 500px) {
+            font-size: 1.8rem;
+        }
+    }
+
+    // .footer__menu-link
+
+    &__menu-link {
+        transition: .3s color;
+
+        @media(max-width: 500px) {
+            font-size: 1.4rem;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+    &__contact-links {
+        margin-bottom: 1.5rem;
+    }
+
+    &__contact-link {
+        line-height: 2.4rem;
+
+        @media(max-width: 500px) {
+            font-size: 1.4rem;
+        }
+
+        span {
+            transition: .3s color;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                span {
+                    color: $blue;
+                }
+            }
+        }
+    }
+
+    // .footer__social
+
+    &__social {
+        display: flex;
+    }
+
+    // .footer__social-item
+
+    &__social-item+&__social-item {
+        margin-left: 1rem;
+    }
+
+    &__social-item {
+        svg path {
+            transition: .3s fill;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg path {
+                    fill: $blue;
+                }
+            }
+        }
+    }
+}
