@@ -2171,6 +2171,7 @@ img {
 }
 
 .edit-btn {
+  display: none;
   width: 11.5rem;
 }
 
@@ -2893,36 +2894,6 @@ input.invalid {
   margin-bottom: 10rem;
 }
 
-.step-1__aside-img {
-  width: 34.5rem;
-  margin-bottom: 6rem;
-}
-
-.step-2__aside-img {
-  margin-bottom: 8.4rem;
-}
-
-.step-3__aside-img {
-  margin-bottom: 7.3rem;
-}
-
-.step-4__aside-img {
-  margin-bottom: 7.2rem;
-}
-
-.step-5__aside-img {
-  margin-bottom: 7.4rem;
-}
-
-.step-6__aside-img {
-  width: 43.3rem;
-  margin-bottom: 3.1rem;
-}
-
-.step-7__aside-img {
-  margin-bottom: 3.2rem;
-}
-
 [data-step="7"] .step__header {
   margin-bottom: 4rem;
 }
@@ -2974,6 +2945,7 @@ input.invalid {
 }
 
 .step-item__subchecks {
+  display: none;
   position: relative;
   padding-top: 4rem;
   margin-top: 1rem;
@@ -3496,6 +3468,11 @@ input[name="target_ip"] {
   -webkit-transition: .3s fill;
   -o-transition: .3s fill;
   transition: .3s fill;
+}
+
+.sidebar__img {
+  width: 34.5rem;
+  margin-bottom: 3rem;
 }
 
 .top-nav {

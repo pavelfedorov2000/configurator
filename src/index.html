@@ -20,7 +20,7 @@
 
         <main class="step">
 
-            <div class="container step__inner">
+            <div id="top" class="container step__inner">
                 @@include('blocks/modules/aside/_aside.html')
                 <form id="form" action="#">
                     @@include('blocks/modules/steps/step-1/_step-1.html')
@@ -32,9 +32,9 @@
                     @@include('blocks/modules/steps/step-7/_step-7.html')
                     @@include('blocks/modules/steps/step-8/_step-8.html')
                     <div class="step__buttons">
-                        <button id="back-btn" class="btn back-btn" type="button">Back</button>
-                        <button id="next-btn" class="btn next-btn" type="button"
-                            style="margin-left: auto; margin-right: 0;">Next</button>
+                        <a id="back-btn" class="btn back-btn" href="#top">Back</a>
+                        <a id="next-btn" class="btn next-btn" href="#top"
+                            style="margin-left: auto; margin-right: 0;">Next</a>
                     </div>
                 </form>
             </div>
@@ -46,9 +46,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="libs/jquery.formstyler.min.js"></script>
-    <!-- <script src="libs/ion.rangeSlider.min.js"></script>
-    <script src="libs/jquery.validate.min.js"></script>
-    <script src="libs/jquery.magnific-popup.js"></script> -->
     <script src="js/script.min.js"></script>
 </body>
 

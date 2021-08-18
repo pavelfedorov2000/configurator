@@ -1,6 +1,5 @@
 .container {
     max-width: 141rem;
-    //max-width: 100%;
     padding: 0 2rem;
     margin: 0 auto;
 }
@@ -118,51 +117,6 @@
 
 }
 
-.step-1 {
-    &__aside-img {
-        width: 34.5rem;
-        margin-bottom: 6rem;
-    }
-}
-
-.step-2 {
-    &__aside-img {
-        margin-bottom: 8.4rem;
-    }
-}
-
-.step-3 {
-    &__aside-img {
-        margin-bottom: 7.3rem;
-    }
-}
-
-.step-4 {
-    &__aside-img {
-        margin-bottom: 7.2rem;
-    }
-}
-
-.step-5 {
-    &__aside-img {
-        margin-bottom: 7.4rem;
-    }
-}
-
-.step-6 {
-    &__aside-img {
-        width: 43.3rem;
-        //height: 41.5rem;
-        margin-bottom: 3.1rem;
-    }
-}
-
-.step-7 {
-    &__aside-img {
-        margin-bottom: 3.2rem;
-    }
-}
-
 [data-step="7"] {
     .step__header {
         margin-bottom: 4rem;
@@ -272,6 +226,7 @@
     }
 
     &__subchecks {
+        display: none;
         position: relative;
         padding-top: 4rem;
         margin-top: 1rem;
