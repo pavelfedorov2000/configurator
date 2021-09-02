@@ -23,11 +23,14 @@
                 <div class="tooltip__info">
                     (e.g. 12 VDC like your laptop is powered
                     with external power adapter)
+                    <button class="tooltip__close-btn" type="button">
+                        <img src="img/icons/close.svg" alt="крестик">
+                    </button>
                 </div>
             </div>
         </div>
-        <div>
-            <label class="step-item__check-item">
+        <div class="step-item__check-item drop-input">
+            <label>
                 <input class="check-box" type="checkbox">
                 <span class="check-style"></span>
                 <span class="check-text">
@@ -36,20 +39,21 @@
             </label>
             <input class="input step-item__check-input" name="power_source_input">
         </div>
-        <div>
-            <div class="step-item__check-item">
-                <label>
-                    <input class="check-box" type="checkbox" value="External AC Power">
-                    <span class="check-style"></span>
-                    <span class="check-text">
-                        External AC Power
-                    </span>
-                </label>
-                <div class="tooltip">
-                    <button class="tooltip__btn tooltip__btn--question" type="button">?</button>
-                    <div class="tooltip__info">
-                        e.g. 110VAC in US or 220 VAC in Europe
-                    </div>
+        <div class="step-item__check-item">
+            <label>
+                <input class="check-box" type="checkbox" value="External AC Power">
+                <span class="check-style"></span>
+                <span class="check-text">
+                    External AC Power
+                </span>
+            </label>
+            <div class="tooltip">
+                <button class="tooltip__btn tooltip__btn--question" type="button">?</button>
+                <div class="tooltip__info">
+                    e.g. 110VAC in US or 220 VAC in Europe
+                    <button class="tooltip__close-btn" type="button">
+                        <img src="img/icons/close.svg" alt="крестик">
+                    </button>
                 </div>
             </div>
         </div>

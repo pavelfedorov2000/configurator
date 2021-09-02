@@ -52,16 +52,23 @@
 }
 
 .edit-btn {
-    display: none;
+    //display: none;
     width: 11.5rem;
+
+    @media(max-width: 500px) {
+        width: 8.7rem;
+        margin-top: 2rem;
+    }
 }
 
 .next-btn {
-    background-color: #0000FF;
+    background-color: $blue;
 
     @media (any-hover: hover) {
         &:hover {
-            box-shadow: 0px 0px 2rem #0000FF;
+            background-color: #fff;
+            color: $blue;
+            //box-shadow: 0px 0px 2rem #0000FF;
         }
     }
 
@@ -69,9 +76,9 @@
         background-color: #3131FF;
     }
 
-    &:focus {
+    /* &:focus {
         border: 0.2rem solid #FFFFFF;
-    }
+    } */
 
     &:disabled {
         background-color: #ACB5BE;

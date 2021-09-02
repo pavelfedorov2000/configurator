@@ -93,12 +93,24 @@
             border-color: #fff;
             color: #fff;
             font-weight: 600;
+
+            &+.tooltip__info {
+                @media(max-width: 500px) {
+                    white-space: nowrap;
+                }
+            }
         }
 
         &--question {
             border-width: 0.1rem;
             border-color: rgba(255, 255, 255, 0.6);
             color: rgba(255, 255, 255, 0.6);
+
+            &+.tooltip__info {
+                @media(max-width: 500px) {
+                    white-space: normal;
+                }
+            }
         }
     }
 
@@ -124,7 +136,6 @@
         @media(max-width: 500px) {
             right: 2rem;
             left: auto;
-            //white-space: normal;
         }
 
         a {
@@ -144,17 +155,20 @@
         display: none;
         width: 1.4rem;
         height: 1.4rem;
+        flex-shrink: 0;
         margin-left: 1rem;
 
         @media(max-width: 1024px) {
             display: block;
         }
     }
-
-    /* &:hover {
-        .tooltip__info {
-            visibility: visible;
-            opacity: 1;
-        }
-    } */
 }
+
+/* // Фоновый цвет у инпута при автозаполнении (по умолчанию синий)
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #000 inset !important;
+    //color: #fff !important;
+} */

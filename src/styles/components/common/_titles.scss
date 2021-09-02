@@ -25,6 +25,20 @@
     }
 }
 
+.step-subtitle {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 600;
+
+    @media(max-width: 768px) {
+        font-size: 1.8rem;
+    }
+
+    @media(max-width: 500px) {
+        font-size: 1.6rem;
+    }
+}
+
 .step-num {
     position: relative;
     padding-left: 6.9rem;

@@ -9,6 +9,25 @@
     overflow-x: hidden;
 }
 
+/* .mob-hidden {
+    @media(max-width: 500px) {
+        display: none;
+    }
+}
+
+.mob-visible {
+    display: none;
+
+    @media(max-width: 500px) {
+        display: block;
+    }
+} */
+
+#form {
+    position: relative;
+    z-index: 100;
+}
+
 .ttu {
     text-transform: uppercase;
 }
@@ -27,10 +46,11 @@
     @media(max-width: 768px) {
         grid-template-columns: 1fr;
     }
+}
 
-    /* @media(max-width: 500px) {
-        grid-template-columns: 1fr;
-    } */
+.col-4 {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
 }
 
 .span-2 {
@@ -72,9 +92,13 @@
 
     &__aside {
         position: fixed;
+        //width: 34.5rem;
         top: 8rem;
         left: 24rem;
-        @extend %flex-col-center;
+        //display: flex;
+        //flex-direction: column;
+        //align-items: flex-end;
+        //@extend %flex-col-center;
 
         @media(max-width: 992px) {
             position: relative;
@@ -127,6 +151,71 @@
     }
 }
 
+.colors {
+    width: 7rem * 4 + 3rem * 3;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem 3rem;
+
+    @media(max-width: 500px) {
+        //grid-template-columns: repeat(5, 1fr);
+        width: 5rem * 4 + 1rem * 3;
+        grid-gap: 1rem;
+    }
+}
+
+.color {
+    .check-style {
+        width: 100%;
+        height: 7rem;
+        border: none;
+
+        @media(max-width: 500px) {
+            height: 5rem;
+        }
+    }
+
+    .check-box:checked+.check-style:before {
+        background-size: 2.5rem 3.1rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &--light {
+        .check-box:checked+.check-style:before {
+            background-image: url(../img/icons/black-check.svg);
+        }
+    }
+}
+
+.result-color {
+    width: 100%;
+    height: 7rem;
+
+    @media(max-width: 500px) {
+        height: 5rem;
+    }
+}
+
+.result-colors {
+    width: 7rem * 4 + 3rem * 3;
+    grid-gap: 2rem 3rem;
+
+    @media(max-width: 500px) {
+        width: 5rem * 3 + 1rem * 2;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+.product-usage {
+    .step-item__title {
+        @media(max-width: 768px) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
 .step-item {
 
     // .step-item__title
@@ -149,7 +238,7 @@
             margin-left: 2rem;
 
             @media(max-width: 768px) {
-                display: block;
+                width: 100%;
                 font-size: 1.6rem;
                 line-height: 1.9rem;
                 margin-left: 0;
@@ -191,6 +280,7 @@
 
     &__check-fields {
         grid-row-gap: 3rem;
+        align-items: flex-start;
 
         @media(max-width: 768px) {
             grid-row-gap: 2rem;
@@ -201,6 +291,8 @@
 
     &__check-item {
         display: flex;
+        //@extend %vertical-align;
+        flex-wrap: wrap;
 
         >label {
             @extend %vertical-align;
@@ -215,9 +307,16 @@
                 margin-left: 0.5rem;
             }
         }
+
+        /* &--drop-input {
+            &+.step-item__check-input {
+                display: none;
+            }
+        } */
     }
 
     &__check-input {
+        width: 100%;
         margin-top: 3rem;
 
         @media(max-width: 768px) {
@@ -371,15 +470,41 @@
     }
 }
 
-.target-cost .step-item__label {
-    @media(max-width: 500px) {
-        max-width: 18.1rem;
+.drop-input {
+    .step-item__check-input {
+        display: none;
     }
 }
 
-.preferred-colors .step-item__check-fields {
-    @media(max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
+.target-cost {
+    .step-item__label {
+        @media(max-width: 500px) {
+            max-width: 18.1rem;
+        }
+    }
+}
+
+.target-cost,
+.target-retail .power-source {
+    .tooltip__info {
+        @media(max-width: 500px) {
+            width: calc(70vw);
+            right: auto;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.visual-indication {
+    .tooltip__info {
+        @media(max-width: 500px) {
+            width: auto;
+            white-space: nowrap;
+            right: auto;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
 
@@ -399,20 +524,6 @@
                 width: 0.2rem;
             }
         }
-
-        /* &__line-radio {
-            &:nth-child(2) {
-                margin-left: 9.1rem;
-            }
-
-            &:nth-child(3) {
-                margin-left: 14.3rem;
-            }
-
-            &:nth-child(4) {
-                margin-left: 14.7rem;
-            }
-        } */
     }
 }
 
@@ -428,8 +539,6 @@
 
         &__line-radio {
             &:nth-child(2) {
-                //margin-left: 4rem;
-
                 .radio-text {
                     max-width: 10.5rem;
 
@@ -440,8 +549,6 @@
             }
 
             &:nth-child(3) {
-                //margin-left: 7.7rem;
-
                 .radio-text {
                     max-width: 9.7rem;
 
@@ -452,7 +559,6 @@
             }
 
             &:nth-child(4) {
-                //margin-left: 7.3rem;
 
                 .radio-text {
                     max-width: 11.3rem;
@@ -464,7 +570,6 @@
             }
 
             &:nth-child(5) {
-                //margin-left: 4.5rem;
 
                 .radio-text {
                     max-width: 15.1rem;
@@ -494,28 +599,6 @@
                 width: 0.2rem;
             }
         }
-
-        /* &__line-radio {
-            &:nth-child(2) {
-                margin-left: 10rem;
-            }
-
-            &:nth-child(3) {
-                margin-left: 9.3rem;
-            }
-
-            &:nth-child(4) {
-                margin-left: 8.1rem;
-            }
-
-            &:nth-child(5) {
-                margin-left: 7.7rem;
-            }
-
-            &:nth-child(6) {
-                margin-left: 4.9rem;
-            }
-        } */
     }
 }
 
@@ -610,6 +693,7 @@
         right: auto;
         width: 21.7rem;
         line-height: 1.2rem;
+        white-space: normal;
     }
 }
 
@@ -644,8 +728,16 @@
     .step-item__check-item {
         &:nth-child(2) {
             .tooltip__info {
-                width: 29.7rem;
+                width: 26.5rem;
                 white-space: normal;
+                right: -5rem;
+            }
+        }
+
+        &:nth-child(4) {
+            .tooltip__info {
+                width: 20rem;
+                white-space: normal
             }
         }
     }
@@ -685,6 +777,10 @@
 .temperature-range {
     &__input {
         @extend %vertical-align;
+
+        @media(max-width: 500px) {
+            font-size: 1.6rem;
+        }
 
         &--from {
             input {
@@ -762,6 +858,8 @@
     .step-item {
         &__check-item {
             &:nth-child(1) {
+                flex-wrap: nowrap;
+
                 .check-text {
                     white-space: nowrap;
                 }
@@ -806,7 +904,15 @@ input[name="target_ip"] {
 
     // .contacts__field
 
-    &__field {}
+    &__field {
+        @media(max-width: 500px) {
+            .tooltip__info {
+                left: 50%;
+                right: auto;
+                transform: translate(-50%, -50%)
+            }
+        }
+    }
 
     // .contacts__field-name
 
@@ -821,17 +927,25 @@ input[name="target_ip"] {
 
     // .contacts__label
 
-    &__label {}
-
-    // .contacts__input
-
-    &__input {}
+    &__label {
+        @media(max-width: 500px) {
+            font-size: 1.6rem;
+        }
+    }
 }
 
 .result-item {
     &__header {
-        @extend %vertical-align;
+        align-items: center;
         margin-bottom: 4rem;
+
+        @media(max-width: 500px) {
+            margin-bottom: 2rem;
+        }
+
+        @media(min-width: 500px) {
+            display: flex;
+        }
     }
 
     &__title {
@@ -841,19 +955,42 @@ input[name="target_ip"] {
         letter-spacing: 0.01em;
         text-transform: uppercase;
         margin-right: 3rem;
+
+        @media(max-width: 500px) {
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+            margin-right: 0;
+        }
     }
 
     &__item+&__item {
         margin-top: 4rem;
+
+        @media(max-width: 768px) {
+            margin-top: 3rem;
+        }
+
+        @media(max-width: 500px) {
+            margin-top: 2rem;
+        }
     }
 
     &__item-title {
         font-size: 2rem;
         font-weight: 700;
         margin-bottom: 2rem;
+
+        @media(max-width: 500px) {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &__item-value {
         font-size: 1.8rem;
+
+        @media(max-width: 500px) {
+            font-size: 1.6rem;
+        }
     }
 }

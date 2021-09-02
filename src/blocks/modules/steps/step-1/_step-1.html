@@ -9,8 +9,24 @@
         @@include('./fields/_help.html')
         @@include('./fields/_product-category.html')
         @@include('./fields/_product-type.html')
-        @@include('./fields/_text-field_1.html')
-        @@include('./fields/_text-field_2.html')
-        @@include('./fields/_text-field_3.html')
+        <fieldset class="step__item step-item">
+            <label class="field-title step-item__textarea-title" for="ideal_client">
+                Who is your ideal client? Who is that person?
+                What is important for them?
+            </label>
+            <textarea class="input textarea" name="ideal_client" id="ideal_client"></textarea>
+        </fieldset>
+        <fieldset class="step__item step-item">
+            <label class="field-title step-item__textarea-title" for="product_solution">
+                What client pains does your product solve?
+            </label>
+            <textarea class="input textarea" name="product_solution" id="product_solution"></textarea>
+        </fieldset>
+        <fieldset class="step__item step-item">
+            <label class="field-title step-item__textarea-title" for="similar_products">
+                Are there similar products on the market?
+            </label>
+            <textarea class="input textarea" name="similar_products" id="similar_products"></textarea>
+        </fieldset>
     </div>
 </div>
