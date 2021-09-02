@@ -227,7 +227,7 @@ $(function () {
     // Логика шагов и прогресс
     let currentStep = 0;
     const stepImg = document.querySelector('#step-img');
-    const stepImgSrc = ['img/watches/1.svg', 'img/watches/2.svg', 'img/watches/3.svg', 'img/watches/4.svg', 'img/watches/5.svg', 'img/watches/06.png', 'img/watches/07.png', 'img/watches/08.png'];
+    const stepImgSrc = ['img/watches/01.svg', 'img/watches/02.svg', 'img/watches/03.svg', 'img/watches/04.svg', 'img/watches/05.svg', 'img/watches/06.png', 'img/watches/07.png', 'img/watches/08.png'];
 
     const stepPercents = [12.5, 25, 27.5, 50, 62.5, 75, 87.5, 100];
     const statusPercent = document.querySelector('.nav__status-percent');
@@ -271,16 +271,8 @@ $(function () {
                 $('.result-color').remove();
                 $('.result-value').remove();
             }
-            /* if (nextBtn.classList.contains('next-btn--sum-up') && validateForm()) {
-                outputChoosenColors();
-                getAllChecks();
-            } */
         });
     }
-
-    /* function outputResult(n) {
-        
-    } */
 
     function showActiveMenuItemNext(n) {
         if (n == 0) {
@@ -439,13 +431,6 @@ $(function () {
         }
     }
 
-    /* nextBtn.addEventListener('click', () => {
-        if (nextBtn.classList.contains('next-btn--sum-up') && validateForm()) {
-            outputChoosenColors();
-            getAllChecks();
-        }
-    }); */
-
     function nextStep(n) {
         if (n == 1 && !validateForm()) return false;
         if (n <= 7) {
@@ -457,7 +442,6 @@ $(function () {
         showActiveMenuItemNext(currentStep);
         showPercent(currentStep);
         fillStepTitle(currentStep);
-        //outputResult(currentStep);
     }
 
     function prevStep(n) {

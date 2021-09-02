@@ -1957,6 +1957,7 @@ input[type='submit'].styler[disabled] {
           align-items: center;
 }
 
+.step__aside,
 .step-item__line-radio,
 .thanks__inner {
   display: -webkit-box;
@@ -1968,6 +1969,7 @@ input[type='submit'].styler[disabled] {
           flex-direction: column;
 }
 
+.step__aside,
 .step-item__line-radio,
 .thanks__inner {
   -webkit-box-align: center;
@@ -2788,20 +2790,6 @@ input.invalid {
   position: relative;
   overflow-x: hidden;
 }
-
-/* .mob-hidden {
-    @media(max-width: 500px) {
-        display: none;
-    }
-}
-
-.mob-visible {
-    display: none;
-
-    @media(max-width: 500px) {
-        display: block;
-    }
-} */
 
 #form {
   position: relative;

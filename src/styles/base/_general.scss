@@ -9,20 +9,6 @@
     overflow-x: hidden;
 }
 
-/* .mob-hidden {
-    @media(max-width: 500px) {
-        display: none;
-    }
-}
-
-.mob-visible {
-    display: none;
-
-    @media(max-width: 500px) {
-        display: block;
-    }
-} */
-
 #form {
     position: relative;
     z-index: 100;
@@ -92,13 +78,9 @@
 
     &__aside {
         position: fixed;
-        //width: 34.5rem;
         top: 8rem;
         left: 24rem;
-        //display: flex;
-        //flex-direction: column;
-        //align-items: flex-end;
-        //@extend %flex-col-center;
+        @extend %flex-col-center;
 
         @media(max-width: 992px) {
             position: relative;
